@@ -34,7 +34,7 @@ class _AddViewState extends State<AddView> {
               },
             ).toList(),
           ),
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width / 1.3,
             child: TextFormField(
               controller: _amountController,

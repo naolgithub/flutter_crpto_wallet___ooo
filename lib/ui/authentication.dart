@@ -24,7 +24,7 @@ class _AuthenticationState extends State<Authentication> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width / 1.3,
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
@@ -45,7 +45,7 @@ class _AuthenticationState extends State<Authentication> {
             SizedBox(
               height: MediaQuery.of(context).size.height / 35,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width / 1.3,
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
