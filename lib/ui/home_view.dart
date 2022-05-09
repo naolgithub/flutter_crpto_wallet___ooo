@@ -23,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
         child: StreamBuilder(
           stream: FirebaseFirestore.instance
               .collection('Users')
-              .doc(FirebaseAuth.instance.currentUser?.uid)
+              .doc(FirebaseAuth.instance.currentUser!.uid)
               .collection('Coins')
               .snapshots(),
           builder:
@@ -33,6 +33,7 @@ class _HomeViewState extends State<HomeView> {
                 child: CircularProgressIndicator(),
               );
             }
+
             return ListView(
               children: snapshot.data!.docs.map((DocumentSnapshot document) {
                 return Container(
@@ -40,7 +41,7 @@ class _HomeViewState extends State<HomeView> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text("Coin Name:${document.id}"),
-                      Text('Amount Owned: ${document.data()["Amount"]}'),
+                     // Text('Amount Owned: ${document.data()["Amount"]}'),
                     ],
                   ),
                 );
